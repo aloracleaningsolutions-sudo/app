@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/admin.css">
+<script>window.__aloraErrors=[];window.addEventListener('error',function(e){var t=e.target||{};window.__aloraErrors.push((t.src||t.href)?('Could not load: '+(t.src||t.href)):((e.message||'Error')+(e.filename?' ('+e.filename.split('/').pop()+':'+e.lineno+')':'')));},true);</script>
 </head>
 <body>
 <div class="ambient" aria-hidden="true"><i></i><i></i></div>
@@ -31,5 +32,16 @@
 <script src="/assets/config.js"></script>
 <script src="/assets/shared.js"></script>
 <script src="/assets/admin.js"></script>
+<script>
+window.addEventListener('load',function(){setTimeout(function(){
+  var r=document.getElementById('root'); if(r&&r.innerHTML.trim())return;
+  var ok=function(b){return b?'<b style="color:#12977E">found</b>':'<b style="color:#B4463A">MISSING</b>';};
+  var errs=(window.__aloraErrors||[]).map(function(x){return '<li>'+String(x).replace(/</g,'&lt;')+'</li>';}).join('')||'<li>None</li>';
+  r.innerHTML='<div style="max-width:640px;margin:40px auto;padding:24px;font-family:system-ui,sans-serif;background:#fff;border-radius:18px;line-height:1.6">'+
+   '<h2 style="margin-top:0">The admin could not start</h2><p>Send a screenshot of this box.</p><ul>'+
+   '<li>config.js: '+ok(window.ALORA_CONFIG)+'</li><li>shared.js: '+ok(window.Alora)+'</li><li>Supabase library: '+ok(window.supabase)+'</li></ul>'+
+   '<p><b>Errors:</b></p><ul style="font-size:13px;word-break:break-all">'+errs+'</ul><p style="font-size:13px;color:#5A6D80">Page: '+location.href+'</p></div>';
+},1500);});
+</script>
 </body>
 </html>
