@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-bg="cloud">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#F2F6FB">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Alora">
+<title>Alora</title>
+<link rel="icon" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/assets/splash.jpg">
+<link rel="stylesheet" href="/assets/client.css">
+</head>
+<body>
+<div class="ambient" id="ambient" aria-hidden="true"><div class="photo-bg" id="photoBg"></div><i></i><i></i><i></i><div class="grain"></div></div>
+
+<div class="splash" id="splash" role="button" tabindex="0" aria-label="Skip intro">
+  <img class="splash-logo" src="/assets/logo-white.png" alt="Alora" width="130" height="38">
+  <button class="skip" id="skipBtn" type="button">Skip</button>
+  <div>
+    <h1 id="splashTitle">Welcome home</h1>
+    <p id="splashSub">Your home is taken care of.</p>
+    <div class="bar"><i></i></div>
+  </div>
+</div>
+
+<div class="app" id="app"><main id="view" aria-live="polite"></main></div>
+
+<nav class="tabs glass" id="tabs" aria-label="Sections" hidden></nav>
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-hidden="true"><div class="inner" id="sheetBody"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<noscript><p style="padding:40px;font-family:sans-serif">Please turn on JavaScript to see your Alora home.</p></noscript>
+<script src="/assets/config.js"></script>
+<script src="/assets/shared.js"></script>
+<script src="/assets/client.js"></script>
+</body>
+</html>
